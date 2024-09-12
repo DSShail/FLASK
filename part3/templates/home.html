@@ -1,0 +1,18 @@
+
+<!--This below line is using the concept of inheritance
+home.html is inherting from layout.html
+-->
+{% extends "layout.html" %}
+
+
+{%block content%}
+<h3> Contents:</h3>
+<ul>
+    <li>Home</li>
+    <!--You can open a link in a new ab using target-->
+    <li> <a href="{{url_for('about')}}" target="_blank">About</a></li>
+    <li>Employees</li>
+    <li>Carrers</li>
+    <li>Contact us</li>
+</ul>
+{% endblock content%}
