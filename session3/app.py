@@ -1,4 +1,5 @@
 from flask import Flask,render_template,url_for
+from employees import employees_data
 
 #create the  flask app
 app=Flask(__name__)
@@ -21,7 +22,17 @@ def evaluate(num):
         title="Evaluate",
         number=num
     )
-
+@app.route("/employees")
+def employees_info():
+    return render_template("employees.html",
+                           title="Employees",
+                           employees=employees_data)
+    
+@app.route("/employees/managers")
+def managers_info():
+    return render_template("managers.html",
+                           title="Managers",
+                           employees=employees_data)    
 
 #start the app in debug mode
 if(__name__=="__main__"):

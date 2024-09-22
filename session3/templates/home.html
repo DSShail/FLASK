@@ -10,8 +10,14 @@ home.html is inherting from layout.html
 <ul>
     <li>Home</li>
     <!--You can open a link in a new tab using target attribute-->
-    <li> <a href="{{url_for('about')}}" target="_blank">About</a></li>
-    <li>Employees</li>
+    <li> <a href="{{url_for('about')}}" 
+        target="_blank">About</a></li>
+    <li> <a href="{{url_for('employees_info')}}"
+         target="_blank">Employees </a></li>
+         <ul>
+            <li> <a href="{{url_for('managers_info')}}" 
+                target=""_blank>Managers</a></li>
+         </ul>
     <li>Carrers</li>
     <li>Contact us</li>
 </ul>
